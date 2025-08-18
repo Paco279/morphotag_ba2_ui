@@ -1,0 +1,23 @@
+[project]
+name = "morphotag_ba2_ui"
+version = "0.1.0"
+description = "A User Interface for the BatchAlign2 morphotag process."
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0",
+  "pylangacq>=0.16.0",
+  "stanza>=1.6.0",
+  "faster-whisper>=1.0.0",
+  "soundfile>=0.12.1",
+]
+
+[project.scripts]
+morphotag-clean = "cli.morphotag-clean:main"
+morphotag-diagnose = "cli.morphotag-diagnose:main"
+morphotag-alignpatch = "cli.morphotag-alignpatch:main"
+morphotag-build-df = "cli.morphotag-build-df:main"
+morphotag-transcribe = "cli.morphotag-transcribe:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
